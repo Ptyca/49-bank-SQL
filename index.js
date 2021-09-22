@@ -29,6 +29,19 @@ app.init = async () => {
     console.log(createUser4);
     console.log('');
 
+    //kuriam saskaita:
+    let createAccount = await Account.create(conn, 1);
+    console.log(createAccount);
+    console.log('');
+    let createAccount2 = await Account.create(conn, 2);
+    console.log(createAccount2);
+    console.log('');
+    let createAccount3 = await Account.create(conn, 2);
+    console.log(createAccount3);
+    console.log('');
+
+
+
 }
 
 app.init();

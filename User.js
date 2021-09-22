@@ -5,11 +5,13 @@ const User = {};
 User.create = async (connection, userFirstname, userLastname) => {
     //pridedam vartotoja
     const sql = 'INSERT INTO `users`\
-                    (`id`, `firstname`, `lastname`)\
+                    (`firstname`, `lastname`)\
                 VALUES\
-                    (NULL, "' + userFirstname + '", "' + userLastname + '")';
+                    ("' + userFirstname + '", "' + userLastname + '")';
 
     const [rows] = await connection.execute(sql);
+    console.log(rows)
+    let createAccount = await Account.create(connection, rows.insertId)
     return `${userFirstname} ${userLastname} sekmingai sukurtas!`
 
 

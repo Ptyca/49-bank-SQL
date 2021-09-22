@@ -1,0 +1,27 @@
+{
+  "name": "49-bank-sql",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "mysql2": "^2.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  },
+  "scripts": {
+    "dev": "nodemon",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ptyca/49-bank-SQL.git"
+  },
+  "keywords": [],
+  "author": "Vytautas",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Ptyca/49-bank-SQL/issues"
+  },
+  "homepage": "https://github.com/Ptyca/49-bank-SQL#readme"
+}
