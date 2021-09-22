@@ -60,7 +60,7 @@ db.createTableAccounts = async (connection) => {
         const sql = 'CREATE TABLE IF NOT EXISTS `accounts` (\
                         `id` int(10) NOT NULL AUTO_INCREMENT,\
                         `user_id` int(10) NOT NULL,\
-                        `balance` int(10) DEFAULT 0 NOT NULL,\
+                        `balance` float(12,2) DEFAULT 0 NOT NULL,\
                     PRIMARY KEY(`id`),\
                     KEY `user_id` (`user_id`)\
                     ) ENGINE = InnoDB DEFAULT CHARSET = utf8 COLLATE = utf8_swedish_ci';
