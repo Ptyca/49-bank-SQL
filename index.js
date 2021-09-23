@@ -66,6 +66,32 @@ app.init = async () => {
     let accountbalance1 = await Account.balance(conn, 3);
     console.log(accountbalance1);
     console.log('');
+
+    let moneyTransfer1 = await Account.sendToOtherAccount(conn, 3, 4, 50);
+    console.log(moneyTransfer1);
+    console.log('');
+
+    let moneyTransfer2 = await Account.sendToOtherAccount(conn, 3, 4, 50);
+    console.log(moneyTransfer2);
+    console.log('');
+
+    let accountDelete = await Account.delete(conn, 1);
+    console.log(accountDelete);
+    console.log('');
+
+    let accountDelete1 = await Account.delete(conn, 2);
+    console.log(accountDelete1);
+    console.log('');
+
+    let accountDelete2 = await Account.delete(conn, 5);
+    console.log(accountDelete2);
+    console.log('');
+
+    //let accountIsactive = await Account.isActive(conn, 1);
+    //console.log(accountIsactive);
+
+
+
 }
 
 app.init();

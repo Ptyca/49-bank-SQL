@@ -45,6 +45,7 @@ db.createTableUsers = async (connection) => {
                         `id` int(10) NOT NULL AUTO_INCREMENT,\
                         `firstname` char(20) COLLATE utf8_swedish_ci NOT NULL,\
                         `lastname` char(20) COLLATE utf8_swedish_ci NOT NULL,\
+                        `active` char(5) COLLATE utf8_swedish_ci NOT NULL DEFAULT "TRUE",\
                         PRIMARY KEY(`id`)\
                     ) ENGINE = InnoDB DEFAULT CHARSET = utf8 COLLATE = utf8_swedish_ci';
         await connection.execute(sql);
@@ -60,7 +61,7 @@ db.createTableAccounts = async (connection) => {
         const sql = 'CREATE TABLE IF NOT EXISTS `accounts` (\
                         `id` int(10) NOT NULL AUTO_INCREMENT,\
                         `user_id` int(10) NOT NULL,\
-                        `balance` float(12,2) DEFAULT 0 NOT NULL,\
+                        `balance` float(12,2) DEFAULT 0 NOT NULL,\`active` char(5) COLLATE utf8_swedish_ci NOT NULL DEFAULT "TRUE",\
                     PRIMARY KEY(`id`),\
                     KEY `user_id` (`user_id`)\
                     ) ENGINE = InnoDB DEFAULT CHARSET = utf8 COLLATE = utf8_swedish_ci';
